@@ -7,7 +7,7 @@ public class Perro {
    private String nombre;
    private String raza;  
    private Calendar fechaProxVac;
-   ArraysList <VacunaPerro> vacunasFecha = new ArraysList <VacunaPerro> ();
+   ArrayList <VacunaPerro> vacunasFecha = new ArrayList <VacunaPerro> ();
     
     //constructor
     
@@ -52,13 +52,11 @@ public class Perro {
         this.fechaProxVac = fechaProxVac;
     }
 
-    public ArraysList<VacunaPerro> getVacunas() {
-        return nombrevacuna;
+    public ArrayList<VacunaPerro> getVacunasFecha() {
+        return vacunasFecha;
     }
 
-    public void setVacunas(ArraysList<VacunaPerro> vacunas) {
-        this.nombrevacuna = vacunas;
+    public void setVacunasFecha(ArrayList<VacunaPerro> vacunasFecha) {
+        this.vacunasFecha = vacunasFecha;
     }
-
-   
 }//llave clase perro

@@ -3,23 +3,32 @@ package proyectoclinica;
 import java.util.*;
 
 public class VacunaPerro {
-    private Calendar fecha;
-    Vacuna vacuna = null;//tenemos solo una vacuna 
+    private int  fecha;
+    private int hora;
+    ArrayList <Vacuna> listavacunas = new ArrayList <Vacuna> ();  
     
     //constructor
     
     VacunaPerro (){}
     
-    VacunaPerro (Calendar fecha, int hora){
+    VacunaPerro (int fecha,int hora){
         this.fecha = fecha;
         this.hora = hora;
     }
+    
+    //metodos
+    
+    public void mostrarListaVacunas (){
+        for (int i = 0; i < this.listavacunas.size(); i++){
+            this.listavacunas.get (i).mostrarVacuna();
+        }
+    }
 
-    public Calendar getFecha() {
+    public int getFecha() {
         return fecha;
     }
 
-    public void setFecha(Calendar fecha) {
+    public void setFecha(int fecha) {
         this.fecha = fecha;
     }
 
@@ -31,14 +40,11 @@ public class VacunaPerro {
         this.hora = hora;
     }
 
-    public ArrayList<Vacuna> getFechavacuna() {
-        return fechavacuna;
+    public ArrayList<Vacuna> getListavacunas() {
+        return listavacunas;
     }
 
-    public void setFechavacuna(ArrayList<Vacuna> fechavacuna) {
-        this.fechavacuna = fechavacuna;
+    public void setListavacunas(ArrayList<Vacuna> listavacunas) {
+        this.listavacunas = listavacunas;
     }
-
-       
-    
 }//llave vacunaperro

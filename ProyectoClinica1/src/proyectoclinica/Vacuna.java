@@ -3,7 +3,7 @@ package proyectoclinica;
 public class Vacuna {
     
     private int id;
-    private String recuerdo;
+    private int recuerdo;
     private String nombr;
     private float precio;
     
@@ -11,7 +11,7 @@ public class Vacuna {
     
     Vacuna (){}
     
-    Vacuna (int id, String recuerdo, String nombr, float precio){
+    Vacuna (int id, int recuerdo, String nombr, float precio){
         this.id = id;
         this.recuerdo = recuerdo;
         this.nombr = nombr;
@@ -19,6 +19,13 @@ public class Vacuna {
     }
     
     //metodos
+    
+    public void mostrarVacuna (){
+        System.out.println("**********DATOS VACUNAS**********");
+        System.out.println("ID" + "\t" + "Recuerdo" + "\t" + "Nombre" + "\t" + "Precio");
+        System.out.println("getId()" + "\t" + getRecuerdo() + "\t" + getNombr() + "\t" + getPrecio());
+        System.out.println("**********FIN DATOS VACUNAS**********");
+    }
 
     public int getId() {
         return id;
@@ -28,11 +35,11 @@ public class Vacuna {
         this.id = id;
     }
 
-    public String getRecuerdo() {
+    public int getRecuerdo() {
         return recuerdo;
     }
 
-    public void setRecuerdo(String recuerdo) {
+    public void setRecuerdo(int recuerdo) {
         this.recuerdo = recuerdo;
     }
 
